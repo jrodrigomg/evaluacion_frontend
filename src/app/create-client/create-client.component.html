@@ -1,0 +1,36 @@
+<div class="modal fade" id="verifyModalContent2" tabindex="-1" role="dialog" aria-labelledby="verifyModalContent2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="verifyModalContent2_title">Nuevo Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre" class="col-form-label">Nombre:</label>
+                        <input type="text" [(ngModel)]="cliente.nombre" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="cui" class="col-form-label">Cui:</label>
+                        <input type="text" [(ngModel)]="cliente.cui" class="form-control" id="cui" name="cui">
+                    </div>
+                    <div class="form-group">
+                        <label for="saldo" class="col-form-label">Saldo:</label>
+                        <input type="text" [(ngModel)]="cliente.saldo" class="form-control" id="saldo" name="saldo">
+                    </div>
+                    <div class="form-group">
+                        <label for="url_imagen" class="col-form-label">URL de la imagen:</label>
+                        <input type="text" [(ngModel)]="cliente.url_imagen" class="form-control" id="url_imagen" name="url_imagen"> 
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="crearCliente()"  data-dismiss="modal">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>

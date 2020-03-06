@@ -1,0 +1,15 @@
+<th scope="row">{{cliente.id}}</th>
+<td>{{cliente.nombre}}</td>
+<td>{{cliente.cui}}</td>
+<td>{{cliente.saldo}}</td>
+<td>
+    <img class="rounded-circle m-0 avatar-sm-table" [src]="cliente.url_imagen"  alt="">
+</td>
+<td>
+    <a href="#" class="text-success mr-2">
+        <i class="nav-icon i-Pen-2 font-weight-bold" data-toggle="modal" data-target="#verifyModalContent2" data-whatever="@getbootstrap" (click)="editCliente()"></i>
+    </a>
+    <a href="#" class="text-danger mr-2">
+        <i class="nav-icon i-Close-Window font-weight-bold" (click)="removeCliente()"></i>
+    </a>
+</td>

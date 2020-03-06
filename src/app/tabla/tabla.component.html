@@ -1,0 +1,42 @@
+<section class="demos" id="demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card o-hidden mb-12">
+                    <div class="card-header d-flex align-items-center border-0">
+                        <h3 class="w-50 float-left card-title m-0">Clientes</h3>
+                        <div class="dropdown dropleft text-right w-50 float-right">
+                            <button class="btn bg-gray-100" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="crearCliente()">
+                                <i class="nav-icon i-Gear-2"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <a class="dropdown-item" data-toggle="modal" data-target="#verifyModalContent2" data-whatever="@getbootstrap">Crear nuevo usuario</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="table-responsive table-dark">
+                            <table id="user_table" class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">CUI</th>
+                                        <th scope="col">Saldo</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr *ngFor="let cliente of clientes" (deleteCliente)="deleteCliente($event)" (setCliente)="setCliente($event)"  [app-cliente-item]="cliente"></tr>                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-create-client #child (getClientes)="getClientes()"></app-create-client>
