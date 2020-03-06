@@ -11,18 +11,18 @@ export class ClienteService {
 
   getClientes()
   {
-    return this.http.get('http://localhost:3000/clientes');
+    return this.http.get('http://192.168.0.49:1638/api/Cliente');
   }
   crearCliente(cliente)
   {
-    return this.http.post('http://localhost:3000/clientes',cliente);
+    return this.http.post('http://192.168.0.49:1638/api/Cliente',cliente);
   }
   editarCliente(cliente)
   {
-    return this.http.put('http://localhost:3000/clientes/'+cliente.id,cliente);
+    return this.http.put('http://192.168.0.49:1638/api/Cliente/'+cliente.id,cliente);
   }
   deleteCliente(clienteId)
   {
-    return this.http.delete('http://localhost:3000/clientes/'+clienteId);
+    return this.http.delete('http://192.168.0.49:1638/api/Cliente/'+clienteId);
   }
 }
